@@ -1,0 +1,63 @@
+<h1 class="mt-4">Clientes</h1>
+<ol class="breadcrumb mb-4">
+  <li class="breadcrumb-item active">Cadastro</li>
+</ol>
+<div class="container">
+  <form>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="id-cliente">Id</label>
+          <input type="text" id="id-cliente" class="form-control" disabled/>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="data-cadatro">Data Cadastro</label>
+          <input type="text" id="data-cadatro" class="form-control" disabled/>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="data-atualizacao">Data Última Atualização</label>
+          <input type="text" id="data-atualizacao" class="form-control" disabled/>
+        </div>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="nome">Nome *</label>
+          <input type="text" id="nome" class="form-control" required="true"/>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="cpf">Cpf *</label>
+          <input type="text" id="cpf" class="form-control" required="true"/>
+        </div>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ativo1" value="true">
+            <label class="form-check-label" for="ativo1">Ativo</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="ativo2" value="false">
+            <label class="form-check-label" for="ativo2">Inativo</label>
+          </div>
+        </div>
+      </div>
+    </div> <!--row-->
+    <div class="row">
+      <div class="col-md-2">
+        <button class="btn btn-primary">
+          <i class="fa fa-save"></i> Salvar Cliente
+        </button>
+      </div>
+    </div> <!--row-->
+  </form>
+</div>
