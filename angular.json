@@ -34,7 +34,8 @@
             "allowedCommonJsDependencies": [
               "rxjs-compat",
               "lodash",
-              "jQuery"
+              "jQuery",
+              "core-js"
             ]
           },
           "configurations": {

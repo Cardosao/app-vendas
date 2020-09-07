@@ -1,20 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule } from '@angular/forms';
 import { ClienteRoutingModule } from './cliente-routing.module';
 import { ClienteFormComponent } from './cliente-form/cliente-form.component';
+import { ClienteListComponent } from './cliente-list/cliente-list.component';
+import {CustomPaginationComponent} from '../pagination/custom-pagination/custom-pagination.component';
 
 
 @NgModule({
   declarations: [
-    ClienteFormComponent
+    ClienteFormComponent,
+    ClienteListComponent,
+    CustomPaginationComponent
   ],
   imports: [
     CommonModule,
-    ClienteRoutingModule
+    ClienteRoutingModule,
+    FormsModule,
   ],
   exports: [
-    ClienteFormComponent
+    ClienteFormComponent,
+    ClienteListComponent,
   ]
 })
 export class ClienteModule { }

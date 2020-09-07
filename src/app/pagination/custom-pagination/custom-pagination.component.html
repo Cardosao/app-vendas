@@ -1,0 +1,76 @@
+<hr class="my-no w-100">
+<div class="row">
+  <div class="col-md-12">
+    <div *ngIf="page" class="float-left">
+      <div class="dropdown">
+        <button aria-expanded="false" aria-haspopup="true"
+                class="btn btn-outline dropdown-toggle" data-toggle="dropdown"
+                type="button">
+          {{page.size}} itens por página
+        </button>
+        <div class="dropdown-menu dropdown-menu-left menu">
+          <a class="dropdown-item active" [routerLink]="" (click)="updatePageSize(5)">5 itens por página</a>
+          <a class="dropdown-item" [routerLink]="" (click)="updatePageSize(10)">10 itens por página</a>
+          <a class="dropdown-item" [routerLink]="" (click)="updatePageSize(100)">100 itens por página</a>
+        </div>
+      </div>
+    </div>
+    <div class="float-right">
+        <span class="align-self-center mb-1 mr-2 text-muted">
+          Itens: {{page.size * (page.number + 1) > page.totalElements ?
+          page.totalElements :
+          page.size * (page.number + 1)}}
+          de {{page.totalElements}}
+        </span>
+      <a [routerLink]=""
+         class="btn btn-outline" [ngClass]="{'disabled': page.first }"
+         (click)="previousPage()">
+        <i class="fa fa-chevron-left"></i>
+      </a>
+      <a [routerLink]=""
+         class="btn btn-outline" [ngClass]="{'disabled': page.last }"
+         (click)="nextPage()">
+        <i class="fa fa-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-sm-12 col-md-5">
+    <div class="dataTables_info" id="dataTable_info" role="status" aria-live="polite">Showing 41 to 50 of 57 entries
+    </div>
+  </div>
+  <div class="col-sm-12 col-md-7">
+    <div class="dataTables_paginate paging_simple_numbers" id="dataTable_paginate">
+      <ul class="pagination">
+        <li class="paginate_button page-item previous" id="dataTable_previous">
+          <a [ngClass]="{'disabled': page.first }"
+             (click)="previousPage()"
+             aria-controls="dataTable"
+             data-dt-idx="0" tabindex="0"
+             class="page-link">Previous</a>
+        </li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="1" tabindex="0"
+                                                  class="page-link">1</a></li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="2" tabindex="0"
+                                                  class="page-link">2</a></li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="3" tabindex="0"
+                                                  class="page-link">3</a></li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="4" tabindex="0"
+                                                  class="page-link">4</a></li>
+        <li class="paginate_button page-item active"><a href="#" aria-controls="dataTable" data-dt-idx="5" tabindex="0"
+                                                        class="page-link">5</a></li>
+        <li class="paginate_button page-item "><a href="#" aria-controls="dataTable" data-dt-idx="6" tabindex="0"
+                                                  class="page-link">6</a></li>
+        <li class="paginate_button page-item next" id="dataTable_next">
+          <a [ngClass]="{'disabled': page.last }"
+             (click)="nextPage()" aria-controls="dataTable"
+             data-dt-idx="7" tabindex="0"
+             class="page-link">Next</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
